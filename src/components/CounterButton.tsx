@@ -1,13 +1,14 @@
 import * as React from 'react';
 
 interface CounterButtonProps {
-    type?: "decrement" | "increment"
+  isIncrement?: boolean;
+  onClick?: () => void;
 }
 
-export class CounterButton extends React.Component<CounterButtonProps, {}> {
-
-    render() {
-        const label = this.props.type === 'decrement' ? '-' : '+';
-        return <button>{label}</button>
-    }
-}
+export const CounterButton: React.FC<CounterButtonProps> = ({
+  isIncrement = true,
+  onClick,
+}) => {
+  const label = isIncrement === true ? '+' : '-';
+  return <button onClick={onClick}>{label}</button>;
+};
