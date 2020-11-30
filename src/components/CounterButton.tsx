@@ -1,25 +1,13 @@
 import * as React from 'react';
 
-interface CounterButtonState {
-    counter: number;
+interface CounterButtonProps {
+    type?: "decrement" | "increment"
 }
 
-export class CounterButton extends React.Component<{}, CounterButtonState> {
-    constructor(props: any) {
-        super(props);
-        this.state = {
-            counter: 0
-        }
-        this.handleOnClick = this.handleOnClick.bind(this);
-    }
-
-    handleOnClick() {
-        this.setState({
-            counter: this.state.counter + 1
-        });
-    }
+export class CounterButton extends React.Component<CounterButtonProps, {}> {
 
     render() {
-        return <button onClick={this.handleOnClick}>{this.state.counter}</button>;
+        const label = this.props.type === 'decrement' ? '-' : '+';
+        return <button>{label}</button>
     }
 }

@@ -1,20 +1,16 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { CounterButton } from '../CounterButton';
+import { Counter } from '../Counter';
 
-describe('CounterButton', () => {
-    describe('render', () => {
-        test('Debería renderizar un botón con counter 0', () => {
-            const wrapper = shallow(<CounterButton/>);
-            expect(wrapper.find('button').text()).toBe('0');
-        });
+describe('Counter', () => {
+  describe('render', () => {
+    test('Debería renderizar un CounterButton con propiedad undefined', () => {
+      const wrapper = shallow(<Counter/>);
+      expect(wrapper.find('CounterButton').at(0).prop('type')).toBeUndefined();
     });
-
-    describe('Increment button', () => {
-        test('Debería renderizar un 1 cuando se haya hecho un click en el botón', () => {
-            const wrapper = shallow(<CounterButton/>);
-            wrapper.find('button').simulate('click');
-            expect(wrapper.find('button').text()).toBe('1');
-        });
+    test('Debería renderizar un CounterButton con propiedad decrement', () => {
+      const wrapper = shallow(<Counter/>);
+      expect(wrapper.find('CounterButton').at(1).prop('type')).toBe("decrement");
     });
+  });
 });
