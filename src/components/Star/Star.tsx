@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import styled from '@emotion/styled';
 
-const Container = styled.span `
-    cursor : pointer 
+const Container = styled.span<any> `
+    cursor : pointer;
+    ::before {content: '${(props) => props.enable ? '⭐' : '🌰'}'} 
 `;
 
 interface StarProps {
@@ -16,5 +17,5 @@ export const Star : FC <StarProps> = (props) => {
             props.onClick(props.value)
         }
     
-        return props.enable ? <Container onClick = {handlerOnClick} >⭐</Container> : <Container onClick = {handlerOnClick}>🌰</Container>
+    return <Container onClick = {handlerOnClick} enable = {props.enable}/>
 };
