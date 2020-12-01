@@ -1,20 +1,19 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { CounterButton } from '../CounterButton';
+import { Counter } from '../Counter';
 
 describe('CounterButton', () => {
     describe('render', () => {
-        test('Debería renderizar un botón con counter 0', () => {
-            const wrapper = shallow(<CounterButton/>);
-            expect(wrapper.find('button').text()).toBe('0');
+        test('Debería renderizar un botón con texto +', () => {
+            const wrapper = shallow(<Counter type="increment"/>);
+            expect(wrapper.find('button').text()).toBe('+');
         });
     });
 
-    describe('Increment button', () => {
-        test('Debería renderizar un 1 cuando se haya hecho un click en el botón', () => {
-            const wrapper = shallow(<CounterButton/>);
-            wrapper.find('button').simulate('click');
-            expect(wrapper.find('button').text()).toBe('1');
+    describe('render', () => {
+        test('Debería renderizar un botón con texto -', () => {
+            const wrapper = shallow(<Counter type="decrement"/>);
+            expect(wrapper.find('button').text()).toBe('-');
         });
     });
 });
