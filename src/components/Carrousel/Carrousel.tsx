@@ -11,19 +11,21 @@ const Container = styled.div`
   padding: 15px;
 `;
 
+const arrayRandom = ["asdf", "fdsa", "queso", "murcielago", "papa", "aguacate", "chocolate", "cereales"]
 
 export const Carrousel: FC = () => {
   const [text, setText] = useState("");
-  const [predicted, setPredicted] = useState<Array<string> | undefined>();
-
-  const arrayRandom = ["asdf", "fdsa", "queso", "murcielago", "papa", "aguacate", "chocolate", "cereales"]
+  const [predicted, setPredicted] = useState<string[]>();
+  console.log("Paso por aqui")
+  
   const handlerText = (event: any) => { 
-    setText(event.currentTarget.value) 
-    setPredicted(arrayRandom.filter( el => el.includes(text)))
+    const lastValue = event.currentTarget.value
+    setText(lastValue) 
+    setPredicted(arrayRandom.filter( el => el.includes(lastValue)))
   } 
   
   return <Container color="yellow">
     <input onChange={handlerText} value={text}/>
-    <div>{predicted?.map((value: string) => <div>{value}</div>)}</div>
+    <div>{predicted?.map((value: string) => <div key={value}>{value}</div>)}</div>
     </Container>
 }
