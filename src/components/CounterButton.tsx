@@ -13,7 +13,7 @@ export class CounterButton extends React.Component<CounterButtonProps, CounterBu
         super(props);
         this.state = {
             counter: 0
-        }
+        };
         this.handleOnClick = this.handleOnClick.bind(this);
     }
 

@@ -7,4 +7,4 @@ export const Colors = {
         value: '#75ac75',
         es: 'Verde'
     }
-}
+};

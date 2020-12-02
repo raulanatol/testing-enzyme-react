@@ -22,11 +22,11 @@ export const Header: FC = () => {
         } else {
             setColor(Colors.RED);
         }
-    }
+    };
 
     return <Container color={color.value}>
         <Paragraph>Soy una cabecera de color: {color.es}</Paragraph>
         <CounterButton onLimit={handleOnLimit}/>
         <p>{color.value}</p>
-    </Container>
+    </Container>;
 };

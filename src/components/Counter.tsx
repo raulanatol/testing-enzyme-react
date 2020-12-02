@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface CounterProps {
-    type ?: "decrement" | "increment"
+    type?: 'decrement' | 'increment'
 }
 
 export class Counter extends React.Component<CounterProps> {
