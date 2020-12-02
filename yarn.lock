@@ -1297,6 +1297,15 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@cowcoders/eslint-config@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@cowcoders/eslint-config/-/eslint-config-1.1.1.tgz#97a28306d07ddd3124e1608de4ead8beebd94894"
+  integrity sha512-adECsZaOyv869oVRkcOhscr17cmjQA1owg+DLA6EwqQYng29Sd0TfQ9gHRK25e5fRBUoM45eddPiKC6Fk40o/g==
+  dependencies:
+    eslint-plugin-jsx-a11y "^6.3.1"
+    eslint-plugin-no-only-tests "^2.4.0"
+    eslint-plugin-react-hooks "^4.2.0"
+
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -5029,6 +5038,11 @@ eslint-plugin-jsx-a11y@^6.3.1:
     has "^1.0.3"
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
+
+eslint-plugin-no-only-tests@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-no-only-tests/-/eslint-plugin-no-only-tests-2.4.0.tgz#7d565434aa7d16ccc7eea957c391d98f827332ca"
+  integrity sha512-azP9PwQYfGtXJjW273nIxQH9Ygr+5/UyeW2wEjYoDtVYPI+WPKwbj0+qcAKYUXFZLRumq4HKkFaoDBAwBoXImQ==
 
 eslint-plugin-react-hooks@^4.2.0:
   version "4.2.0"
